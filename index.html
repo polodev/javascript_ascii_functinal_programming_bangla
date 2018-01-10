@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    input {
+      padding: 10px;
+    }
+    button {
+      padding: 10px;
+      background: teal;
+      color: white;
+      border: none;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <input type="text" id="text">
+    <button id="button">make uppercase</button>
+  </div>
+  <div id="output"> </div>
+  <script src="script.js"></script>
+  <script>
+   var button = document.getElementById('button');
+   var output = document.getElementById('output');
+   button.addEventListener('click', function () {
+    var text = document.getElementById('text').value;
+    document.getElementById('text').value = '';
+    var ucstring = upperCaseString(text);
+    output.innerText = ucstring;
+   });
+  </script>
+</body>
+</html>
